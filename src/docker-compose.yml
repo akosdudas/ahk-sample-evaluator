@@ -1,0 +1,8 @@
+version: "3.4"
+
+services:
+  mssql:
+    image: akosdudas/ahk-sample:evaluator-v1
+    build:
+      context: .
+      dockerfile: evaluator/Dockerfile
