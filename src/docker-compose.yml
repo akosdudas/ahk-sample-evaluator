@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
   evaluator:
-    image: akosdudas/ahk-sample:evaluator-v1
+    image: ghcr.io/akosdudas/ahk-sample:evaluator-v1
     build:
       context: .
       dockerfile: evaluator/Dockerfile
