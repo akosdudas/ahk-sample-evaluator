@@ -14,7 +14,7 @@ jobs:
       - name: Build and push Docker images
         working-directory: ./src
         run: |
-          echo "${{ secrets.GHCR_TOKEN }}" | docker login https://ghcr.io -u ${{ secrets.GHCR_USERNAME }} --password-stdin
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
           docker-compose build
           docker-compose push
           docker logout https://ghcr.io
